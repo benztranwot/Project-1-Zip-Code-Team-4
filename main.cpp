@@ -1,6 +1,10 @@
 // CSCI 331 Project 1 Zip Code Version 1.0
 // TEAM 4: Minh Quan Tran, Mitchell Rogers, Carson Kariniemi, Abel Asfaw
+
 // This is the draft version but it already satisfied the requirement of generating the output data that sorted by zip code and state.
+// To run the program, the following command work for me
+// g++ .\main.cpp -o .\main.exe
+// .\main.exe
 
 #include <string>
 #include "PostalCodeItem.h"
