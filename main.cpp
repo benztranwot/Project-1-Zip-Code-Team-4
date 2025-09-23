@@ -8,19 +8,19 @@
 
 // I think we can refactor the codes
 // Maybe create a menu in main or divide those #5 and #6 requirement (sorted by zip and state) into two separate file
-// Develop a separate function to read the csv and input them into the array
+// Develop a separate function to read the csv and input them into the list
 // Add comments for doxygen
 // Write a design document
 // Create typescript files for both the sorted by zip and by state
 
 #include <string>
 #include "PostalCodeItem.h"
-#include "PostalArray.h"
+#include "PostalList.h"
 #include <fstream>
 
 using namespace std;
 
-void inputCSVtoArray(PostalArray &inputArray, string fileName)
+void inputCSVtoList(PostalList &inputList, string fileName)
 {
     PostalCodeItem item;
     string line = "";
@@ -55,7 +55,7 @@ void inputCSVtoArray(PostalArray &inputArray, string fileName)
 
         item.setLongitude(stod(line));
 
-        inputArray.addItem(item);
+        inputList.addItem(item);
     }
 
     myFile.close();
@@ -63,10 +63,10 @@ void inputCSVtoArray(PostalArray &inputArray, string fileName)
 
 int main()
 {
-    PostalArray myPostalList;
+    PostalList myPostalList;
     string fileName = "us_postal_codes.csv";
 
-    inputCSVtoArray(myPostalList, fileName);
+    inputCSVtoList(myPostalList, fileName);
 
     myPostalList.printSortedByZip();
     // myPostalList.printSortedByState();

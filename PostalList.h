@@ -1,19 +1,19 @@
-#ifndef POSTAL_ARRAY_H
-#define POSTAL_ARRAY_H
+#ifndef POSTAL_LIST_H
+#define POSTAL_LIST_H
 
 #include "PostalCodeItem.h"
 #include <vector>
 
 using namespace std;
 
-class PostalArray
+class PostalList
 {
 private:
     vector<PostalCodeItem> items;
 
 public:
     // Constructors
-    PostalArray() = default;
+    PostalList() = default;
 
     // Add an item
     void addItem(const PostalCodeItem &item);
@@ -37,5 +37,5 @@ public:
     void printSortedByState() const;
 };
 
-#include "PostalArray.cpp"
+#include "PostalList.cpp"
 #endif

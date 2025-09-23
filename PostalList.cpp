@@ -1,4 +1,4 @@
-#include "PostalArray.h"
+#include "PostalList.h"
 #include <iostream>
 #include <algorithm>
 #include <fstream>
@@ -7,23 +7,23 @@
 using namespace std;
 
 // Add an item
-void PostalArray::addItem(const PostalCodeItem &item)
+void PostalList::addItem(const PostalCodeItem &item)
 {
     items.push_back(item);
 }
 
 // Get item by index
-PostalCodeItem PostalArray::getItem(int index) const
+PostalCodeItem PostalList::getItem(int index) const
 {
     if (index < items.size())
     {
         return items[index];
     }
-    throw out_of_range("Index out of range in PostalArray::getItem");
+    throw out_of_range("Index out of range in PostalList::getItem");
 }
 
 // Find item by ZIP code
-const PostalCodeItem *PostalArray::findByZip(int zip) const
+const PostalCodeItem *PostalList::findByZip(int zip) const
 {
     for (const auto &item : items)
     {
@@ -36,13 +36,13 @@ const PostalCodeItem *PostalArray::findByZip(int zip) const
 }
 
 // Get size
-int PostalArray::size() const
+int PostalList::size() const
 {
     return items.size();
 }
 
 // Print all
-void PostalArray::printAll() const
+void PostalList::printAll() const
 {
     for (int i = 0; i < items.size(); i++)
     {
@@ -52,7 +52,7 @@ void PostalArray::printAll() const
 }
 
 // Print items sorted by ZIP
-void PostalArray::printSortedByZip() const
+void PostalList::printSortedByZip() const
 {
     // Make a copy so original order is preserved
     vector<PostalCodeItem> sortedItems = items;
@@ -71,7 +71,7 @@ void PostalArray::printSortedByZip() const
 }
 
 // Print items sorted by state
-void PostalArray::printSortedByState() const
+void PostalList::printSortedByState() const
 {
     // Copy items so we don’t change the internal order
     vector<PostalCodeItem> sortedItems = items;
