@@ -20,15 +20,14 @@
 
 using namespace std;
 
-int main()
+void inputCSVtoArray(PostalArray &inputArray, string fileName)
 {
-    PostalArray arr;
     PostalCodeItem item;
     string line = "";
     int location = 0;
 
     ifstream myFile;
-    myFile.open("us_postal_codes.csv");
+    myFile.open(fileName);
 
     getline(myFile, line);
 
@@ -56,13 +55,21 @@ int main()
 
         item.setLongitude(stod(line));
 
-        arr.addItem(item);
+        inputArray.addItem(item);
     }
 
     myFile.close();
+}
 
-    arr.printSortedByZip();
-    // arr.printSortedByState();
+int main()
+{
+    PostalArray myPostalList;
+    string fileName = "us_postal_codes.csv";
+
+    inputCSVtoArray(myPostalList, fileName);
+
+    myPostalList.printSortedByZip();
+    // myPostalList.printSortedByState();
 
     return 0;
 }
