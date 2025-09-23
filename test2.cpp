@@ -1,3 +1,5 @@
+// This file is for testing the PostalArray
+
 #include <string>
 #include "PostalCodeItem.h"
 #include "PostalArray.h"

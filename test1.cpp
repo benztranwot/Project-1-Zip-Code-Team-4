@@ -1,3 +1,5 @@
+// This file is for testing the PostalCodeItem class
+
 #include <iostream>
 #include <string>
 #include "PostalCodeItem.h"
