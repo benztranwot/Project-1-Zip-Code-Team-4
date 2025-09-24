@@ -47,7 +47,7 @@ void PostalList::printAll() const
     for (int i = 0; i < items.size(); i++)
     {
         items[i].printInfo();
-        cout << "-------------------" << endl;
+        cout << "-----------------------------------------------------------------------------------------------" << endl;
     }
 }
 
@@ -66,7 +66,7 @@ void PostalList::printSortedByZip() const
     for (const auto &item : sortedItems)
     {
         item.printInfo();
-        cout << "-------------------" << endl;
+        cout << "-----------------------------------------------------------------------------------------------" << endl;
     }
 }
 
@@ -89,6 +89,6 @@ void PostalList::printSortedByState() const
     for (const auto &item : sortedItems)
     {
         item.printInfo();
-        cout << "-------------------" << endl;
+        cout << "-----------------------------------------------------------------------------------------------" << endl;
     }
 }

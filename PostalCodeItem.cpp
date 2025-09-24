@@ -93,5 +93,5 @@ void PostalCodeItem::printInfo() const
          << setw(30) << county
          << setw(12) << latitude
          << setw(12) << longitude
-         << std::endl;
+         << endl;
 }
